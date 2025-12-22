@@ -278,12 +278,19 @@
             border-radius: 44px; border: 3px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.05) inset,
                         0 0 80px var(--purple-glow);
-            padding: 12px; position: relative; overflow: hidden;
+            padding: 10px; position: relative; overflow: hidden;
         }
 
-        .phone-mockup::before {
-            content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-            width: 120px; height: 28px; background: #0a0a0f; border-radius: 0 0 20px 20px;
+        .phone-notch {
+            position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+            width: 100px; height: 28px; background: #000;
+            border-radius: 0 0 18px 18px; z-index: 10;
+        }
+
+        .phone-notch::before {
+            content: ''; position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+            width: 8px; height: 8px; background: #1a1a2e; border-radius: 50%;
+            box-shadow: 0 0 0 2px #0a0a0f;
         }
 
         .phone-screen {
@@ -291,12 +298,16 @@
             overflow: hidden; position: relative;
         }
 
-        .phone-screen img { width: 100%; height: 100%; object-fit: cover; }
+        .phone-screen img {
+            width: 100%; height: 100%; object-fit: cover;
+            border-radius: 34px;
+        }
 
         .phone-screen-placeholder {
             width: 100%; height: 100%; display: flex; flex-direction: column;
             align-items: center; justify-content: center; gap: 16px;
             background: linear-gradient(180deg, var(--calm-dark-blue), var(--calm-medium-blue));
+            border-radius: 34px;
         }
 
         .phone-screen-placeholder .sf-icon { width: 48px; height: 48px; color: var(--purple-light); opacity: 0.5; }
@@ -514,13 +525,69 @@
             .hero { padding: 120px 24px 40px; }
             .hero-icon { width: 100px; height: 100px; border-radius: 28px; margin-bottom: 30px; }
             .hero-icon .sf-icon { width: 50px; height: 50px; }
-            .phone-carousel { height: 520px; }
-            .phone-mockup { width: 220px; height: 460px; border-radius: 36px; }
-            .phone-slide.prev, .phone-slide.next { display: none; }
+
+            /* Mobile Premium Carousel */
+            .phone-carousel { height: 540px; overflow: visible; }
+            
+            .phone-mockup { 
+                width: 260px; height: 530px; border-radius: 40px; 
+                padding: 8px;
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 60px var(--purple-glow);
+            }
+
+            .phone-notch { width: 90px; height: 24px; top: 8px; border-radius: 0 0 16px 16px; }
+            .phone-notch::before { width: 6px; height: 6px; top: 6px; }
+
+            .phone-screen { border-radius: 34px; }
+            .phone-screen img { border-radius: 32px; }
+            .phone-screen-placeholder { border-radius: 32px; }
+
+            /* Show prev/next with subtle visibility on mobile */
+            .phone-slide.prev { 
+                transform: translateX(-85%) scale(0.7); 
+                opacity: 0.3; 
+                filter: blur(3px);
+            }
+            .phone-slide.next { 
+                transform: translateX(85%) scale(0.7); 
+                opacity: 0.3; 
+                filter: blur(3px);
+            }
+
+            .carousel-nav { margin-top: 24px; gap: 16px; }
+            .carousel-btn { width: 44px; height: 44px; }
+            .carousel-dots { gap: 8px; }
+            .carousel-dot { width: 8px; height: 8px; }
+            .carousel-dot.active { width: 24px; }
+
+            .showcase-feature { padding: 16px 20px; }
+            .showcase-feature-icon { width: 42px; height: 42px; border-radius: 12px; }
+            .showcase-feature span { font-size: 0.9rem; }
+
             .footer-top, .footer-links { flex-direction: column; }
             .footer-links { gap: 30px; }
             .footer-bottom { flex-direction: column; text-align: center; }
             .features-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .phone-carousel { height: 480px; }
+            .phone-mockup { 
+                width: 230px; height: 470px; border-radius: 36px;
+                padding: 6px;
+            }
+            .phone-notch { width: 80px; height: 22px; top: 6px; border-radius: 0 0 14px 14px; }
+            .phone-screen { border-radius: 32px; }
+            .phone-screen img { border-radius: 30px; }
+            .phone-screen-placeholder { border-radius: 30px; }
+
+            .phone-slide.prev, .phone-slide.next { 
+                transform: translateX(0) scale(0.6); 
+                opacity: 0;
+            }
+
+            .showcase-header h2 { font-size: 1.6rem; }
+            .showcase-header p { font-size: 1rem; }
         }
     </style>
 </head>
@@ -605,36 +672,41 @@
                     <div class="phone-carousel" id="phoneCarousel">
                         <div class="phone-slide" data-index="0">
                             <div class="phone-mockup">
+                                <div class="phone-notch"></div>
                                 <div class="phone-screen">
-                                    <img src="/screenshot-1.jpg" alt="Home Screen" onerror="this.parentElement.innerHTML='<div class=\'phone-screen-placeholder\'><svg class=\'sf-icon\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z\'/></svg><span>Home</span></div>'">
+                                    <img src="/screenshot-1.png" alt="Home Screen" onerror="this.parentElement.innerHTML='<div class=\'phone-screen-placeholder\'><svg class=\'sf-icon\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z\'/></svg><span>Home</span></div>'">
                                 </div>
                             </div>
                         </div>
                         <div class="phone-slide" data-index="1">
                             <div class="phone-mockup">
+                                <div class="phone-notch"></div>
                                 <div class="phone-screen">
-                                    <img src="/screenshot-2.jpg" alt="Sound Mixer" onerror="this.parentElement.innerHTML='<div class=\'phone-screen-placeholder\'><svg class=\'sf-icon\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z\'/></svg><span>Mixer</span></div>'">
+                                    <img src="/screenshot-2.png" alt="Sound Mixer" onerror="this.parentElement.innerHTML='<div class=\'phone-screen-placeholder\'><svg class=\'sf-icon\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z\'/></svg><span>Mixer</span></div>'">
                                 </div>
                             </div>
                         </div>
                         <div class="phone-slide" data-index="2">
                             <div class="phone-mockup">
+                                <div class="phone-notch"></div>
                                 <div class="phone-screen">
-                                    <img src="/screenshot-3.jpg" alt="Meditation" onerror="this.parentElement.innerHTML='<div class=\'phone-screen-placeholder\'><svg class=\'sf-icon\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z\'/></svg><span>Meditation</span></div>'">
+                                    <img src="/screenshot-3.png" alt="Meditation" onerror="this.parentElement.innerHTML='<div class=\'phone-screen-placeholder\'><svg class=\'sf-icon\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z\'/></svg><span>Meditation</span></div>'">
                                 </div>
                             </div>
                         </div>
                         <div class="phone-slide" data-index="3">
                             <div class="phone-mockup">
+                                <div class="phone-notch"></div>
                                 <div class="phone-screen">
-                                    <img src="/screenshot-4.jpg" alt="Sleep Timer" onerror="this.parentElement.innerHTML='<div class=\'phone-screen-placeholder\'><svg class=\'sf-icon\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12.34 2.02C6.59 1.82 2 6.42 2 12c0 5.52 4.48 10 10 10 3.71 0 6.93-2.02 8.66-5.02-7.51-.25-12.09-8.43-8.32-14.96z\'/></svg><span>Sleep</span></div>'">
+                                    <img src="/screenshot-4.png" alt="Sleep Timer" onerror="this.parentElement.innerHTML='<div class=\'phone-screen-placeholder\'><svg class=\'sf-icon\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12.34 2.02C6.59 1.82 2 6.42 2 12c0 5.52 4.48 10 10 10 3.71 0 6.93-2.02 8.66-5.02-7.51-.25-12.09-8.43-8.32-14.96z\'/></svg><span>Sleep</span></div>'">
                                 </div>
                             </div>
                         </div>
                         <div class="phone-slide" data-index="4">
                             <div class="phone-mockup">
+                                <div class="phone-notch"></div>
                                 <div class="phone-screen">
-                                    <img src="/screenshot-5.jpg" alt="Wellness" onerror="this.parentElement.innerHTML='<div class=\'phone-screen-placeholder\'><svg class=\'sf-icon\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z\'/></svg><span>Wellness</span></div>'">
+                                    <img src="/screenshot-5.png" alt="Wellness" onerror="this.parentElement.innerHTML='<div class=\'phone-screen-placeholder\'><svg class=\'sf-icon\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z\'/></svg><span>Wellness</span></div>'">
                                 </div>
                             </div>
                         </div>
@@ -732,7 +804,7 @@
                 </div>
             </a>
             
-            <div class="coming-soon-badge">Coming January 2026</div>
+            <div class="coming-soon-badge">Coming January 2025</div>
         </div>
     </section>
 
@@ -768,7 +840,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">© 2026 iWellny. All rights reserved.</p>
+                <p class="copyright">© 2025 iWellny. All rights reserved.</p>
                 <div class="footer-social">
                     <a href="https://twitter.com/iwellny" aria-label="Twitter">
                         <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
