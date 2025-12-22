@@ -538,8 +538,10 @@
             .hero-icon { width: 100px; height: 100px; border-radius: 28px; margin-bottom: 30px; }
             .hero-icon .sf-icon { width: 50px; height: 50px; }
 
-            /* Mobile Premium Carousel */
-            .phone-carousel { height: 540px; overflow: visible; }
+            /* Mobile Premium Carousel - Centered */
+            .showcase { padding: 40px 16px 80px; }
+            .phone-carousel-container { width: 100%; display: flex; flex-direction: column; align-items: center; }
+            .phone-carousel { height: 540px; overflow: visible; width: 100%; }
             
             .phone-mockup { 
                 width: 260px; height: 530px; border-radius: 40px; 
@@ -566,15 +568,17 @@
                 filter: blur(3px);
             }
 
-            .carousel-nav { margin-top: 24px; gap: 16px; }
+            .carousel-nav { margin-top: 24px; gap: 16px; width: 100%; justify-content: center; }
             .carousel-btn { width: 44px; height: 44px; }
             .carousel-dots { gap: 8px; }
             .carousel-dot { width: 8px; height: 8px; }
             .carousel-dot.active { width: 24px; }
 
-            .showcase-feature { padding: 16px 20px; }
-            .showcase-feature-icon { width: 42px; height: 42px; border-radius: 12px; }
-            .showcase-feature span { font-size: 0.9rem; }
+            .showcase-features { width: 100%; padding: 0; }
+            .showcase-feature-item { padding: 20px; }
+            .showcase-feature-icon { width: 48px; height: 48px; border-radius: 14px; }
+            .showcase-feature-content h3 { font-size: 1.1rem; }
+            .showcase-feature-content p { font-size: 0.9rem; }
 
             .footer-top, .footer-links { flex-direction: column; }
             .footer-links { gap: 30px; }
@@ -583,6 +587,7 @@
         }
 
         @media (max-width: 480px) {
+            .showcase { padding: 30px 12px 60px; }
             .phone-carousel { height: 480px; }
             .phone-mockup { 
                 width: 230px; height: 470px; border-radius: 36px;
@@ -600,6 +605,9 @@
 
             .showcase-header h2 { font-size: 1.6rem; }
             .showcase-header p { font-size: 1rem; }
+            
+            .carousel-nav { gap: 12px; }
+            .carousel-btn { width: 40px; height: 40px; }
         }
     </style>
 </head>
