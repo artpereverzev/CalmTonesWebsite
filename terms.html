@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - iWellny</title>
+    <meta name="description" content="iWellny Terms of Service - Terms and conditions for using the iWellny app.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --calm-dark-blue: #0D1B2A; --calm-medium-blue: #1B2838; --purple-accent: #8B5CF6; --purple-light: #A78BFA; --purple-dark: #7C3AED; --text-primary: #FFFFFF; --text-secondary: rgba(255, 255, 255, 0.85); --text-muted: rgba(255, 255, 255, 0.6); --glass-bg: rgba(27, 40, 56, 0.6); --glass-border: rgba(255, 255, 255, 0.1); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; background: var(--calm-dark-blue); color: var(--text-primary); min-height: 100vh; line-height: 1.7; }
+        .sf-icon { width: 24px; height: 24px; fill: currentColor; }
+        .animated-bg { position: fixed; inset: 0; z-index: -1; background: linear-gradient(180deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%); }
+        .animated-bg::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.08) 0%, transparent 50%); animation: pulse 15s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 0.8; } }
+        .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 16px 0; background: rgba(13, 27, 42, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--glass-border); }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .navbar-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary); }
+        .navbar-logo { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--purple-accent), var(--purple-dark)); box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3); overflow: hidden; }
+        .navbar-logo img { width: 100%; height: 100%; object-fit: cover; }
+        .navbar-title { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
+        .navbar-nav { display: flex; gap: 32px; align-items: center; }
+        .navbar-nav a { color: var(--text-secondary); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+        .navbar-nav a:hover { color: var(--purple-light); }
+        .navbar-nav a.active { color: var(--purple-accent); }
+        .navbar-toggle { display: none; background: none; border: none; color: var(--text-primary); cursor: pointer; padding: 8px; }
+        .main-content { padding-top: 100px; min-height: 100vh; }
+        .content-container { max-width: 800px; margin: 0 auto; padding: 40px 24px 80px; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--purple-light); text-decoration: none; font-weight: 500; margin-bottom: 40px; transition: all 0.3s ease; }
+        .back-link:hover { color: var(--purple-accent); transform: translateX(-4px); }
+        .page-header { margin-bottom: 40px; }
+        .page-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; background: linear-gradient(135deg, var(--text-primary), var(--purple-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .page-subtitle { color: var(--text-muted); font-size: 1rem; }
+        .glass-card { background: var(--glass-bg); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 32px; margin-bottom: 24px; }
+        .card-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+        .card-title-icon { width: 40px; height: 40px; border-radius: 12px; background: rgba(139, 92, 246, 0.15); display: flex; align-items: center; justify-content: center; color: var(--purple-light); }
+        .card-content { color: var(--text-secondary); }
+        .card-content p { margin-bottom: 16px; }
+        .card-content p:last-child { margin-bottom: 0; }
+        .card-content ul { margin: 16px 0; padding-left: 24px; }
+        .card-content li { margin-bottom: 8px; color: var(--text-secondary); }
+        .card-content strong { color: var(--text-primary); font-weight: 600; }
+        .highlight-box { background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 16px; padding: 20px; margin: 20px 0; }
+        .highlight-box p { margin: 0; color: var(--text-secondary); }
+        .warning-box { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 16px; padding: 20px; margin: 20px 0; }
+        .warning-box p { margin: 0; color: var(--text-secondary); }
+        .footer { background: rgba(13, 27, 42, 0.9); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); padding: 60px 24px 30px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-top { display: flex; justify-content: space-between; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
+        .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+        .footer-brand-icon { width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, var(--purple-accent), var(--purple-dark)); display: flex; align-items: center; justify-content: center; }
+        .footer-brand-icon .sf-icon { width: 22px; height: 22px; color: white; }
+        .footer-brand-name { font-size: 1.3rem; font-weight: 700; }
+        .footer-tagline { color: var(--text-muted); max-width: 300px; }
+        .footer-links { display: flex; gap: 40px; }
+        .footer-column h4 { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+        .footer-column a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 10px; transition: color 0.3s ease; }
+        .footer-column a:hover { color: var(--purple-light); }
+        .footer-bottom { border-top: 1px solid var(--glass-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .copyright { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-social { display: flex; gap: 12px; }
+        .footer-social a { width: 40px; height: 40px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: all 0.3s ease; }
+        .footer-social a:hover { background: rgba(139, 92, 246, 0.2); border-color: rgba(139, 92, 246, 0.3); color: var(--purple-light); }
+        @media (max-width: 768px) {
+            .navbar-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(13, 27, 42, 0.98); backdrop-filter: blur(20px); flex-direction: column; padding: 20px; border-top: 1px solid var(--glass-border); }
+            .navbar-nav.mobile-open { display: flex; }
+            .navbar-toggle { display: block; }
+            .navbar-nav a { padding: 16px 0; border-bottom: 1px solid var(--glass-border); width: 100%; text-align: center; }
+            .page-title { font-size: 2rem; }
+            .glass-card { padding: 24px 20px; }
+            .footer-top, .footer-links { flex-direction: column; }
+            .footer-links { gap: 30px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <div class="navbar-logo"><img src="/android-chrome-512x512.png" alt="iWellny" onerror="this.style.display='none'"></div>
+                <span class="navbar-title">iWellny</span>
+            </a>
+            <div class="navbar-nav" id="navbarNav">
+                <a href="/">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/support.html">Support</a>
+                <a href="/privacy.html">Privacy</a>
+                <a href="mailto:support@iwellny.com">Contact</a>
+            </div>
+            <button class="navbar-toggle" onclick="toggleMobileMenu()">
+                <svg class="sf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:28px;height:28px"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="content-container">
+            <a href="/" class="back-link"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>Back to Home</a>
+
+            <div class="page-header">
+                <h1 class="page-title">Terms of Service</h1>
+                <p class="page-subtitle">Last updated: December 2024</p>
+            </div>
+
+            <!-- Agreement -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/></svg></span>Agreement to Terms</h2>
+                <div class="card-content">
+                    <p>By downloading, installing, or using iWellny ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+                    <p>These Terms constitute a legal agreement between you and iWellny ("we", "us", or "our"). We reserve the right to modify these Terms at any time, and we will notify you of significant changes through the App.</p>
+                </div>
+            </div>
+
+            <!-- License -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></span>License to Use</h2>
+                <div class="card-content">
+                    <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the App for your personal, non-commercial purposes, subject to these Terms.</p>
+                    <p><strong>You may:</strong></p>
+                    <ul>
+                        <li>Use the App on devices you own or control</li>
+                        <li>Create and save personal sound mixes</li>
+                        <li>Record memory sounds for personal use</li>
+                        <li>Access premium features with a valid subscription</li>
+                    </ul>
+                    <p><strong>You may not:</strong></p>
+                    <ul>
+                        <li>Copy, modify, or distribute the App or its content</li>
+                        <li>Reverse engineer, decompile, or disassemble the App</li>
+                        <li>Use the App for any commercial purpose without permission</li>
+                        <li>Share your subscription credentials with others</li>
+                        <li>Attempt to bypass any security measures</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Audio Content -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span>Audio Content</h2>
+                <div class="card-content">
+                    <p>The ambient sounds included in iWellny are sourced from:</p>
+                    <ul>
+                        <li><strong>Freesound.org</strong> — Creative Commons licensed sounds (CC0, attribution-free)</li>
+                        <li><strong>Pixabay</strong> — Royalty-free sounds with commercial use license</li>
+                        <li><strong>Original recordings</strong> — Created specifically for iWellny</li>
+                    </ul>
+                    <p>All bundled sounds are properly licensed for use within the App. You may use these sounds as part of the App's functionality but may not extract, redistribute, or use them outside of the App.</p>
+                    <div class="highlight-box">
+                        <p><strong>Memory Sounds:</strong> Any audio you record using the Memory Sounds feature belongs to you. You retain full ownership of your personal recordings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscriptions -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg></span>Subscriptions & Payments</h2>
+                <div class="card-content">
+                    <p><strong>Premium Subscription:</strong></p>
+                    <ul>
+                        <li>iWellny offers optional premium features through auto-renewable subscriptions</li>
+                        <li>Payment is charged to your Apple ID account at confirmation of purchase</li>
+                        <li>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period</li>
+                        <li>Your account will be charged for renewal within 24 hours prior to the end of the current period</li>
+                        <li>You can manage and cancel subscriptions in your App Store account settings</li>
+                    </ul>
+                    <p><strong>Free Trial:</strong></p>
+                    <ul>
+                        <li>If offered, free trials automatically convert to paid subscriptions unless canceled</li>
+                        <li>Any unused portion of a free trial is forfeited when purchasing a subscription</li>
+                    </ul>
+                    <p><strong>Refunds:</strong></p>
+                    <ul>
+                        <li>All purchases are processed by Apple through the App Store</li>
+                        <li>Refund requests must be submitted to Apple directly</li>
+                        <li>We cannot process refunds directly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Health Disclaimer -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>Health & Wellness Disclaimer</h2>
+                <div class="card-content">
+                    <div class="warning-box">
+                        <p><strong>Important:</strong> iWellny is a wellness app designed to help with relaxation, focus, and mindfulness. It is NOT a medical device and should NOT be used to diagnose, treat, cure, or prevent any disease or health condition.</p>
+                    </div>
+                    <ul>
+                        <li>Health data from HealthKit is for informational purposes only</li>
+                        <li>HRV, heart rate, and sleep data are estimates and may not be accurate</li>
+                        <li>The App does not provide medical advice</li>
+                        <li>Consult a healthcare professional for medical concerns</li>
+                        <li>Do not use the App while driving or operating machinery</li>
+                        <li>If you experience any discomfort, stop using the App immediately</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- User Content -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span>User Content</h2>
+                <div class="card-content">
+                    <p>You retain ownership of content you create using the App, including:</p>
+                    <ul>
+                        <li>Memory sound recordings</li>
+                        <li>Custom sound mixes and presets</li>
+                        <li>Journey collections</li>
+                        <li>Personal wellness goals and notes</li>
+                    </ul>
+                    <p>You are solely responsible for any content you create. Do not record audio in locations where recording is prohibited or where you do not have permission.</p>
+                </div>
+            </div>
+
+            <!-- Limitation of Liability -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></span>Limitation of Liability</h2>
+                <div class="card-content">
+                    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</p>
+                    <ul>
+                        <li>The App is provided "AS IS" without warranties of any kind</li>
+                        <li>We do not guarantee the App will be error-free or uninterrupted</li>
+                        <li>We are not liable for any indirect, incidental, or consequential damages</li>
+                        <li>Our total liability shall not exceed the amount you paid for the App in the past 12 months</li>
+                        <li>We are not responsible for any health outcomes related to App use</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Termination -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/></svg></span>Termination</h2>
+                <div class="card-content">
+                    <p>We may terminate or suspend your access to the App at any time, without notice, for conduct that we believe:</p>
+                    <ul>
+                        <li>Violates these Terms</li>
+                        <li>Is harmful to other users or third parties</li>
+                        <li>Is fraudulent or illegal</li>
+                    </ul>
+                    <p>You may terminate your use of the App at any time by deleting it from your device and canceling any active subscriptions.</p>
+                </div>
+            </div>
+
+            <!-- Governing Law -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></span>Governing Law</h2>
+                <div class="card-content">
+                    <p>These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles. Any disputes arising from these Terms shall be resolved through binding arbitration or in the courts of competent jurisdiction.</p>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>Contact Us</h2>
+                <div class="card-content">
+                    <p>If you have questions about these Terms of Service, please contact us at:</p>
+                    <p><strong>Email:</strong> <a href="mailto:support@iwellny.com" style="color: var(--purple-light);">support@iwellny.com</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <div class="footer-brand">
+                        <div class="footer-brand-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                        <span class="footer-brand-name">iWellny</span>
+                    </div>
+                    <p class="footer-tagline">Your complete wellness companion. Find your inner calm with ambient sounds and mindfulness tools.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column"><h4>App</h4><a href="/#features">Features</a><a href="/about.html">About</a><a href="/support.html">Support</a></div>
+                    <div class="footer-column"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div>
+                    <div class="footer-column"><h4>Connect</h4><a href="mailto:support@iwellny.com">Email Us</a><a href="https://twitter.com/iwellny">Twitter</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 iWellny. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://twitter.com/iwellny" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="mailto:support@iwellny.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>function toggleMobileMenu() { document.getElementById('navbarNav').classList.toggle('mobile-open'); }</script>
+</body>
+</html>
