@@ -126,7 +126,8 @@
             <div class="developer-card">
                 <div class="developer-photo">
                     <div class="developer-photo-inner">
-                        <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <img src="/profile_photo.jpg" alt="Artem" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                     </div>
                 </div>
                 <h2 class="developer-greeting">Hi! I'm Artem 👋</h2>
@@ -152,7 +153,6 @@
                     <div class="feature-item"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg><span>Pomodoro focus timer</span></div>
                     <div class="feature-item"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg><span>Wellness dashboard</span></div>
                     <div class="feature-item"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>Heart rate & HRV tracking</span></div>
-                    <div class="feature-item"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12c0-2.54-1.19-4.81-3.04-6.27L16 0H8l-.95 5.73C5.19 7.19 4 9.45 4 12s1.19 4.81 3.05 6.27L8 24h8l.96-5.73C18.81 16.81 20 14.54 20 12z"/></svg><span>Apple Watch app</span></div>
                     <div class="feature-item"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3V3zm0 10h8v8H3v-8zm10 0h8v8h-8v-8zm0-10h8v8h-8V3z"/></svg><span>Home Screen widgets</span></div>
                 </div>
             </div>
@@ -162,13 +162,22 @@
                 <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></span>Built With</h2>
                 <p style="color: var(--text-secondary); margin-bottom: 20px;">iWellny is crafted using these amazing technologies:</p>
                 
+                <div class="library-item"><span class="library-name">UIKit</span><span class="library-usage">Primary user interface framework</span></div>
+                <div class="library-item"><span class="library-name">SwiftUI</span><span class="library-usage">Modern declarative UI components</span></div>
                 <div class="library-item"><span class="library-name">AVFoundation</span><span class="library-usage">Audio playback and mixing engine</span></div>
                 <div class="library-item"><span class="library-name">HealthKit</span><span class="library-usage">Heart rate, HRV, and sleep data</span></div>
                 <div class="library-item"><span class="library-name">CoreLocation</span><span class="library-usage">Location-based soundscapes</span></div>
+                <div class="library-item"><span class="library-name">CloudKit</span><span class="library-usage">iCloud sync and backup</span></div>
                 <div class="library-item"><span class="library-name">ActivityKit</span><span class="library-usage">Live Activities & Dynamic Island</span></div>
-                <div class="library-item"><span class="library-name">MapKit</span><span class="library-usage">Memory sound map display</span></div>
+                <div class="library-item"><span class="library-name">Combine</span><span class="library-usage">Reactive state management</span></div>
+                <div class="library-item"><span class="library-name">CoreData</span><span class="library-usage">Local data persistence</span></div>
+                <div class="library-item"><span class="library-name">StoreKit</span><span class="library-usage">Subscription management</span></div>
+                <div class="library-item"><span class="library-name">UserNotifications</span><span class="library-usage">Timers and reminders</span></div>
                 <div class="library-item"><span class="library-name">WidgetKit</span><span class="library-usage">Home Screen widgets</span></div>
-                <div class="library-item"><span class="library-name">WatchConnectivity</span><span class="library-usage">Apple Watch communication</span></div>
+                <div class="library-item"><span class="library-name">CoreHaptics</span><span class="library-usage">Haptic feedback</span></div>
+                <div class="library-item"><span class="library-name">MapKit</span><span class="library-usage">Memory sound map display</span></div>
+                <div class="library-item"><span class="library-name">RevenueCat</span><span class="library-usage">In-app purchase infrastructure</span></div>
+                <div class="library-item"><span class="library-name">Firebase</span><span class="library-usage">Analytics and crash reporting</span></div>
                 <div class="library-item"><span class="library-name">Lottie</span><span class="library-usage">Premium animations</span></div>
                 
                 <p class="libraries-footer">Thank you to all the contributors who make the iOS development ecosystem amazing!</p>
