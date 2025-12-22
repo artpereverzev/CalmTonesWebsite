@@ -3,43 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Calm Tones</title>
+    <title>Support - iWellny</title>
     
-    <!-- Favicon -->
+    <meta name="description" content="Get help with iWellny. Find answers to common questions, troubleshooting guides, and contact support.">
+    
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
     <link rel="manifest" href="/site.webmanifest">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --calm-dark-blue: #0D1B2A;
+            --calm-medium-blue: #1B2838;
+            --purple-accent: #8B5CF6;
+            --purple-light: #A78BFA;
+            --purple-dark: #7C3AED;
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(255, 255, 255, 0.85);
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --glass-bg: rgba(27, 40, 56, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.1);
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-            background: linear-gradient(135deg, #1a2332 0%, #2d3e50 100%);
-            color: white;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: var(--calm-dark-blue);
+            color: var(--text-primary);
             min-height: 100vh;
             line-height: 1.6;
         }
 
-        /* Header Navigation */
-        .navbar {
-            background: rgba(26, 35, 50, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+        .animated-bg {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            background: linear-gradient(180deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%);
+        }
+
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
             z-index: 1000;
-            padding: 15px 0;
+            padding: 16px 0;
+            background: rgba(13, 27, 42, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
         }
 
         .navbar .container {
@@ -48,7 +77,7 @@
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         .navbar-brand {
@@ -56,411 +85,472 @@
             align-items: center;
             gap: 12px;
             text-decoration: none;
-            color: white;
+            color: var(--text-primary);
         }
 
         .navbar-logo {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .navbar-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--purple-accent), var(--purple-dark));
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
         }
 
         .navbar-title {
             font-size: 1.5rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #4A90E2 0%, #5BA3F5 100%);
+            background: linear-gradient(135deg, var(--purple-light), var(--purple-accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .navbar-nav {
             display: flex;
-            gap: 30px;
+            gap: 32px;
             align-items: center;
         }
 
         .navbar-nav a {
-            color: rgba(255,255,255,0.8);
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
-            position: relative;
         }
 
-        .navbar-nav a:hover {
-            color: #5BA3F5;
-        }
-
-        .navbar-nav a.active {
-            color: #5BA3F5;
-        }
-
-        .navbar-nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(135deg, #4A90E2 0%, #5BA3F5 100%);
-            border-radius: 1px;
-        }
+        .navbar-nav a:hover { color: var(--purple-light); }
+        .navbar-nav a.active { color: var(--purple-accent); }
 
         .navbar-toggle {
             display: none;
             background: none;
             border: none;
-            color: white;
+            color: var(--text-primary);
             font-size: 1.5rem;
             cursor: pointer;
         }
 
-        /* Main content adjustment */
         .main-content {
-            margin-top: 80px;
+            padding-top: 100px;
+            min-height: 100vh;
         }
 
         .content-container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px 24px 80px;
         }
 
         .back-link {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: #5BA3F5;
+            color: var(--purple-light);
             text-decoration: none;
             font-weight: 500;
-            margin-bottom: 30px;
-            transition: color 0.3s ease;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
         }
 
         .back-link:hover {
-            color: #4A90E2;
+            color: var(--purple-accent);
+            transform: translateX(-4px);
         }
 
-        .header {
+        .page-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
-        .logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            border-radius: 20px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #4A90E2 0%, #5BA3F5 100%);
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-        }
-
-        h1 {
-            color: #4A90E2;
+        .header-icon {
+            width: 80px; height: 80px;
+            margin: 0 auto 24px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, var(--purple-accent), var(--purple-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 2.5rem;
-            margin-bottom: 10px;
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
         }
 
-        h2 {
-            color: #5BA3F5;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
+        .page-title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 12px;
         }
 
-        h3 {
-            color: #5BA3F5;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        p, li {
-            margin-bottom: 15px;
-            color: rgba(255,255,255,0.9);
-        }
-
-        ul {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .support-section {
-            background: rgba(255,255,255,0.05);
-            border-radius: 12px;
-            padding: 30px;
-            border: 1px solid rgba(255,255,255,0.1);
-            margin-bottom: 30px;
-        }
-
-        .contact-card {
-            background: rgba(74, 144, 226, 0.1);
-            border: 1px solid rgba(74, 144, 226, 0.3);
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .contact-card a {
-            color: #5BA3F5;
-            text-decoration: none;
-            font-weight: 600;
+        .page-subtitle {
+            color: var(--text-muted);
             font-size: 1.1rem;
         }
 
-        .contact-card a:hover {
-            color: #4A90E2;
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 36px;
+            margin-bottom: 30px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--purple-light);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-title-icon {
+            width: 36px; height: 36px;
+            border-radius: 10px;
+            background: rgba(139, 92, 246, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .faq-item {
-            background: rgba(255,255,255,0.03);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-left: 4px solid #5BA3F5;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
 
-        /* Footer */
-        .footer {
-            background: rgba(26, 35, 50, 0.8);
-            backdrop-filter: blur(20px);
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding: 40px 0;
+        .faq-item:hover { border-color: rgba(139, 92, 246, 0.2); }
+
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--purple-accent);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-question::after { transform: rotate(45deg); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer { max-height: 500px; }
+
+        .faq-answer-content {
+            padding: 0 24px 20px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .trouble-section { margin-bottom: 28px; }
+
+        .trouble-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trouble-title::before {
+            content: '';
+            width: 4px; height: 20px;
+            background: var(--purple-accent);
+            border-radius: 2px;
+        }
+
+        .trouble-list {
+            list-style: none;
+            padding-left: 14px;
+        }
+
+        .trouble-list li {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .trouble-list li::before {
+            content: '•';
+            color: var(--purple-light);
+            position: absolute;
+            left: 0;
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .requirement-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 16px;
             text-align: center;
-            margin-top: 80px;
+        }
+
+        .requirement-icon { font-size: 1.5rem; margin-bottom: 8px; }
+        .requirement-label { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 4px; }
+        .requirement-value { font-weight: 600; }
+
+        .contact-card {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(139, 92, 246, 0.05));
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            text-align: center;
+            padding: 48px 36px;
+        }
+
+        .contact-card .card-title { justify-content: center; color: var(--text-primary); }
+        .contact-card p { color: var(--text-secondary); margin-bottom: 24px; }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--purple-accent), var(--purple-dark));
+            border-radius: 14px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        .contact-email:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4);
+        }
+
+        .response-time { margin-top: 16px; color: var(--text-muted); font-size: 0.9rem; }
+
+        .footer {
+            background: rgba(13, 27, 42, 0.9);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid var(--glass-border);
+            padding: 40px 24px;
+            text-align: center;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 32px;
             margin-bottom: 20px;
             flex-wrap: wrap;
         }
 
         .footer-links a {
-            color: rgba(255,255,255,0.7);
+            color: var(--text-muted);
             text-decoration: none;
-            font-weight: 500;
             transition: color 0.3s ease;
         }
 
-        .footer-links a:hover {
-            color: #5BA3F5;
-        }
+        .footer-links a:hover { color: var(--purple-light); }
+        .copyright { color: var(--text-muted); font-size: 0.9rem; }
 
-        .copyright {
-            color: rgba(255,255,255,0.5);
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .content-container {
-                padding: 20px 15px;
-            }
-            
-            .support-section {
-                padding: 20px;
-            }
-
             .navbar-nav {
                 display: none;
                 position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(26, 35, 50, 0.98);
+                top: 100%; left: 0; right: 0;
+                background: rgba(13, 27, 42, 0.98);
                 backdrop-filter: blur(20px);
                 flex-direction: column;
                 padding: 20px;
-                border-top: 1px solid rgba(255,255,255,0.1);
+                border-top: 1px solid var(--glass-border);
             }
 
-            .navbar-nav.mobile-open {
-                display: flex;
-            }
-
-            .navbar-toggle {
-                display: block;
-            }
+            .navbar-nav.mobile-open { display: flex; }
+            .navbar-toggle { display: block; }
 
             .navbar-nav a {
-                padding: 10px 0;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
+                padding: 16px 0;
+                border-bottom: 1px solid var(--glass-border);
                 width: 100%;
                 text-align: center;
             }
 
-            .navbar-nav a:last-child {
-                border-bottom: none;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 15px;
-            }
+            .glass-card { padding: 28px 20px; }
+            .footer-links { flex-direction: column; gap: 16px; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Header -->
+    <div class="animated-bg"></div>
+
     <nav class="navbar">
         <div class="container">
             <a href="/" class="navbar-brand">
-                <div class="navbar-logo">
-                    <img src="/android-chrome-512x512.png" alt="Calm Tones">
-                </div>
-                <span class="navbar-title">Calm Tones</span>
+                <div class="navbar-logo"></div>
+                <span class="navbar-title">iWellny</span>
             </a>
-            
             <div class="navbar-nav" id="navbarNav">
                 <a href="/">Home</a>
                 <a href="/about.html">About</a>
                 <a href="/support.html" class="active">Support</a>
                 <a href="/privacy.html">Privacy</a>
-                <a href="mailto:support@calmtones.app">Contact</a>
+                <a href="mailto:support@iwellny.app">Contact</a>
             </div>
-            
             <button class="navbar-toggle" onclick="toggleMobileMenu()">☰</button>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="main-content">
+    <main class="main-content">
         <div class="content-container">
             <a href="/" class="back-link">← Back to Home</a>
             
-            <div class="header">
-                <div class="logo">
-                    <img src="/android-chrome-512x512.png" alt="Calm Tones Logo">
-                </div>
-                <h1>Support</h1>
+            <div class="page-header">
+                <div class="header-icon">💬</div>
+                <h1 class="page-title">Support</h1>
+                <p class="page-subtitle">We're here to help you get the most out of iWellny</p>
             </div>
 
-            <div class="support-section">
-                <h2>Frequently Asked Questions</h2>
-
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon">❓</span> Frequently Asked Questions</h2>
+                
                 <div class="faq-item">
-                    <h3>How do I mix multiple sounds together?</h3>
-                    <p>In the mixing view, tap the "+" button to add sounds to your current mix. You can adjust the volume of each sound individually and save your favorite combinations as presets.</p>
+                    <div class="faq-question" onclick="toggleFaq(this)">How do I mix multiple sounds together?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Tap the "Mixer" tab to access our powerful sound mixing studio. Add sounds using the "+" button, adjust individual volumes with the sliders, and save your favorite combinations as presets. You can mix up to 70 sounds simultaneously!</div>
+                    </div>
                 </div>
-
+                
                 <div class="faq-item">
-                    <h3>Can I use Calm Tones while using other apps?</h3>
-                    <p>Yes! Calm Tones supports background playback. Your sounds will continue playing when you switch to other apps or lock your device.</p>
+                    <div class="faq-question" onclick="toggleFaq(this)">Can I use iWellny while using other apps?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Absolutely! iWellny supports background playback. Your sounds will continue playing when you switch apps, lock your device, or even when your screen turns off.</div>
+                    </div>
                 </div>
-
+                
                 <div class="faq-item">
-                    <h3>How do Live Activities work?</h3>
-                    <p>On iOS 16.1+, you can control Calm Tones directly from your Lock Screen and Dynamic Island. Play, pause, and adjust volume without opening the app.</p>
+                    <div class="faq-question" onclick="toggleFaq(this)">How do Live Activities work?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">On iOS 16.1+, control iWellny from your Lock Screen and Dynamic Island. Play, pause, and adjust volume without opening the app. Enable in Settings → iWellny → Live Activities.</div>
+                    </div>
                 </div>
-
+                
                 <div class="faq-item">
-                    <h3>What are location-based sound recommendations?</h3>
-                    <p>When you enable location access, Calm Tones can suggest appropriate soundscapes for your current environment, like ocean sounds when you're near the beach.</p>
+                    <div class="faq-question" onclick="toggleFaq(this)">What are Memory Sounds?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Record ambient audio from meaningful places — a beach, your favorite café, or a peaceful park. Recordings are saved with location data so you can relive those moments anytime.</div>
+                    </div>
                 </div>
-
+                
                 <div class="faq-item">
-                    <h3>Is my data private and secure?</h3>
-                    <p>Absolutely! All audio processing happens locally on your device. We don't collect, store, or transmit any personal information. Read our <a href="/privacy.html" style="color: #5BA3F5;">Privacy Policy</a> for details.</p>
+                    <div class="faq-question" onclick="toggleFaq(this)">Is my data private?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Absolutely! All audio processing happens locally on your device. We don't collect or store any personal information. Read our <a href="/privacy.html" style="color: var(--purple-light);">Privacy Policy</a> for details.</div>
+                    </div>
                 </div>
             </div>
 
-            <div class="support-section">
-                <h2>Troubleshooting</h2>
-
-                <h3>Audio Issues</h3>
-                <ul>
-                    <li>Make sure your device volume is turned up</li>
-                    <li>Check that silent mode is disabled</li>
-                    <li>Try restarting the app</li>
-                    <li>Ensure you have sufficient storage space</li>
-                </ul>
-
-                <h3>Background Playback Issues</h3>
-                <ul>
-                    <li>Check that Background App Refresh is enabled for Calm Tones in Settings</li>
-                    <li>Ensure Low Power Mode is not restricting background activity</li>
-                    <li>Make sure the app has permission for background audio</li>
-                </ul>
-
-                <h3>Live Activities Not Working</h3>
-                <ul>
-                    <li>Live Activities require iOS 16.1 or later</li>
-                    <li>Check that Live Activities are enabled in Settings > Face ID & Passcode</li>
-                    <li>Ensure Calm Tones has permission for Live Activities in Settings</li>
-                </ul>
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon">🔧</span> Troubleshooting</h2>
+                
+                <div class="trouble-section">
+                    <h3 class="trouble-title">Audio Issues</h3>
+                    <ul class="trouble-list">
+                        <li>Make sure your device volume is turned up</li>
+                        <li>Check that silent mode is disabled</li>
+                        <li>Try restarting the app</li>
+                        <li>Ensure sufficient storage space</li>
+                    </ul>
+                </div>
+                
+                <div class="trouble-section">
+                    <h3 class="trouble-title">Background Playback Issues</h3>
+                    <ul class="trouble-list">
+                        <li>Enable Background App Refresh in Settings → iWellny</li>
+                        <li>Disable Low Power Mode if active</li>
+                        <li>Check background audio permissions</li>
+                    </ul>
+                </div>
+                
+                <div class="trouble-section">
+                    <h3 class="trouble-title">Live Activities Not Working</h3>
+                    <ul class="trouble-list">
+                        <li>Requires iOS 16.1 or later</li>
+                        <li>Check Settings → Face ID & Passcode → Allow Access</li>
+                        <li>Enable Live Activities in Settings → iWellny</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="support-section">
-                <h2>Device Requirements</h2>
-                <ul>
-                    <li><strong>iOS:</strong> iOS 15.0 or later</li>
-                    <li><strong>iPhone:</strong> iPhone 7 or newer recommended</li>
-                    <li><strong>iPad:</strong> Compatible with all iPad models supporting iOS 15+</li>
-                    <li><strong>Storage:</strong> At least 100 MB of free space</li>
-                    <li><strong>Internet:</strong> Required only for initial download and updates</li>
-                </ul>
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon">📱</span> Requirements</h2>
+                <div class="requirements-grid">
+                    <div class="requirement-item">
+                        <div class="requirement-icon">📲</div>
+                        <div class="requirement-label">iOS</div>
+                        <div class="requirement-value">17.0+</div>
+                    </div>
+                    <div class="requirement-item">
+                        <div class="requirement-icon">📱</div>
+                        <div class="requirement-label">iPhone</div>
+                        <div class="requirement-value">8 or newer</div>
+                    </div>
+                    <div class="requirement-item">
+                        <div class="requirement-icon">💾</div>
+                        <div class="requirement-label">Storage</div>
+                        <div class="requirement-value">100 MB</div>
+                    </div>
+                    <div class="requirement-item">
+                        <div class="requirement-icon">⌚</div>
+                        <div class="requirement-label">Watch</div>
+                        <div class="requirement-value">watchOS 10+</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="contact-card">
-                <h2>Still Need Help?</h2>
-                <p>Can't find what you're looking for? We're here to help!</p>
-                <p><a href="mailto:support@calmtones.app">support@calmtones.app</a></p>
-                <p style="margin-top: 15px; font-size: 0.9rem; color: rgba(255,255,255,0.7);">We typically respond within 24 hours</p>
+            <div class="glass-card contact-card">
+                <h2 class="card-title">🤝 Still Need Help?</h2>
+                <p>Can't find what you're looking for? We're here for you!</p>
+                <a href="mailto:support@iwellny.app" class="contact-email">✉ support@iwellny.app</a>
+                <p class="response-time">We typically respond within 24 hours</p>
             </div>
         </div>
-    </div>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="/privacy.html">Privacy Policy</a>
-                <a href="/support.html">Support</a>
-                <a href="/about.html">About</a>
-                <a href="mailto:support@calmtones.app">Contact</a>
-            </div>
-            <p class="copyright">© 2025 Calm Tones. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/support.html">Support</a>
+            <a href="/about.html">About</a>
+            <a href="mailto:support@iwellny.app">Contact</a>
         </div>
+        <p class="copyright">© 2025 iWellny. All rights reserved.</p>
     </footer>
 
     <script>
         function toggleMobileMenu() {
-            const nav = document.getElementById('navbarNav');
-            nav.classList.toggle('mobile-open');
+            document.getElementById('navbarNav').classList.toggle('mobile-open');
         }
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const nav = document.getElementById('navbarNav');
-            const toggle = document.querySelector('.navbar-toggle');
-            
-            if (!nav.contains(event.target) && !toggle.contains(event.target)) {
-                nav.classList.remove('mobile-open');
-            }
-        });
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!wasOpen) item.classList.add('open');
+        }
     </script>
 </body>
 </html>
