@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - iWellny</title>
-    <meta name="description" content="iWellny Privacy Policy - How we protect your data and respect your privacy.">
+    <meta name="description" content="iWellny Privacy Policy - Learn how we protect your data and respect your privacy.">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
         .navbar-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary); }
         .navbar-logo { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--purple-accent), var(--purple-dark)); box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3); overflow: hidden; }
         .navbar-logo img { width: 100%; height: 100%; object-fit: cover; }
-        .navbar-title { font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, var(--purple-light), var(--purple-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .navbar-title { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
         .navbar-nav { display: flex; gap: 32px; align-items: center; }
         .navbar-nav a { color: var(--text-secondary); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
         .navbar-nav a:hover { color: var(--purple-light); }
@@ -32,25 +32,25 @@
         .content-container { max-width: 800px; margin: 0 auto; padding: 40px 24px 80px; }
         .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--purple-light); text-decoration: none; font-weight: 500; margin-bottom: 40px; transition: all 0.3s ease; }
         .back-link:hover { color: var(--purple-accent); transform: translateX(-4px); }
-        .page-header { text-align: center; margin-bottom: 50px; }
-        .header-icon { width: 80px; height: 80px; margin: 0 auto 24px; border-radius: 24px; background: linear-gradient(135deg, var(--purple-accent), var(--purple-dark)); display: flex; align-items: center; justify-content: center; box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3); color: white; }
-        .page-title { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 12px; }
-        .last-updated { display: inline-block; padding: 8px 20px; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 30px; color: var(--purple-light); font-size: 0.9rem; font-weight: 500; }
-        .glass-card { background: var(--glass-bg); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 40px; margin-bottom: 30px; }
-        .section-title { font-size: 1.3rem; font-weight: 700; color: var(--purple-light); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
-        .section-icon { width: 32px; height: 32px; border-radius: 8px; background: rgba(139, 92, 246, 0.15); display: flex; align-items: center; justify-content: center; color: var(--purple-light); }
-        .section-content { color: var(--text-secondary); margin-bottom: 24px; }
-        .section-content:last-child { margin-bottom: 0; }
-        .highlight-box { background: rgba(139, 92, 246, 0.08); border-left: 4px solid var(--purple-accent); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 20px 0; }
-        .highlight-box p { color: var(--text-secondary); margin: 0; }
-        .privacy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin-top: 20px; }
-        .privacy-item { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; text-align: center; transition: all 0.3s ease; }
-        .privacy-item:hover { background: rgba(139, 92, 246, 0.08); border-color: rgba(139, 92, 246, 0.2); transform: translateY(-3px); }
-        .privacy-item-icon { margin-bottom: 12px; color: var(--purple-light); }
-        .privacy-item-title { font-weight: 600; margin-bottom: 6px; font-size: 0.95rem; }
-        .privacy-item-desc { font-size: 0.8rem; color: var(--text-muted); }
-        .contact-link { color: var(--purple-light); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
-        .contact-link:hover { color: var(--purple-accent); }
+        .page-header { margin-bottom: 40px; }
+        .page-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; background: linear-gradient(135deg, var(--text-primary), var(--purple-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .page-subtitle { color: var(--text-muted); font-size: 1rem; }
+        .glass-card { background: var(--glass-bg); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 32px; margin-bottom: 24px; }
+        .card-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+        .card-title-icon { width: 40px; height: 40px; border-radius: 12px; background: rgba(139, 92, 246, 0.15); display: flex; align-items: center; justify-content: center; color: var(--purple-light); }
+        .card-content { color: var(--text-secondary); }
+        .card-content p { margin-bottom: 16px; }
+        .card-content p:last-child { margin-bottom: 0; }
+        .card-content ul { margin: 16px 0; padding-left: 24px; }
+        .card-content li { margin-bottom: 8px; color: var(--text-secondary); }
+        .card-content strong { color: var(--text-primary); font-weight: 600; }
+        .highlight-box { background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 16px; padding: 20px; margin: 20px 0; }
+        .highlight-box p { margin: 0; color: var(--text-secondary); }
+        .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .data-table th, .data-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--glass-border); }
+        .data-table th { color: var(--purple-light); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .data-table td { color: var(--text-secondary); }
+        .data-table tr:last-child td { border-bottom: none; }
         .footer { background: rgba(13, 27, 42, 0.9); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); padding: 60px 24px 30px; }
         .footer-container { max-width: 1200px; margin: 0 auto; }
         .footer-top { display: flex; justify-content: space-between; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
@@ -73,7 +73,10 @@
             .navbar-nav.mobile-open { display: flex; }
             .navbar-toggle { display: block; }
             .navbar-nav a { padding: 16px 0; border-bottom: 1px solid var(--glass-border); width: 100%; text-align: center; }
-            .glass-card { padding: 28px 20px; }
+            .page-title { font-size: 2rem; }
+            .glass-card { padding: 24px 20px; }
+            .data-table { font-size: 0.9rem; }
+            .data-table th, .data-table td { padding: 10px 12px; }
             .footer-top, .footer-links { flex-direction: column; }
             .footer-links { gap: 30px; }
             .footer-bottom { flex-direction: column; text-align: center; }
@@ -104,46 +107,134 @@
     <main class="main-content">
         <div class="content-container">
             <a href="/" class="back-link"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>Back to Home</a>
-            
+
             <div class="page-header">
-                <div class="header-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor" style="width:36px;height:36px"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
                 <h1 class="page-title">Privacy Policy</h1>
-                <span class="last-updated">Last updated: December 2025</span>
+                <p class="page-subtitle">Last updated: December 2024</p>
             </div>
 
+            <!-- Privacy First -->
             <div class="glass-card">
-                <div class="highlight-box"><p><strong>TL;DR:</strong> iWellny is built with privacy at its core. We don't collect, store, or transmit any personal data. Everything stays on your device.</p></div>
-                <div class="privacy-grid">
-                    <div class="privacy-item"><div class="privacy-item-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/></svg></div><div class="privacy-item-title">No Tracking</div><div class="privacy-item-desc">Zero analytics</div></div>
-                    <div class="privacy-item"><div class="privacy-item-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg></div><div class="privacy-item-title">Local Only</div><div class="privacy-item-desc">On-device processing</div></div>
-                    <div class="privacy-item"><div class="privacy-item-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg></div><div class="privacy-item-title">Your Data</div><div class="privacy-item-desc">Stays with you</div></div>
-                    <div class="privacy-item"><div class="privacy-item-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div><div class="privacy-item-title">Health Safe</div><div class="privacy-item-desc">In HealthKit only</div></div>
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></span>Privacy First</h2>
+                <div class="card-content">
+                    <div class="highlight-box">
+                        <p><strong>Your privacy matters.</strong> iWellny is designed with privacy at its core. Most of your data never leaves your device, and we collect only the minimum information needed to provide our services.</p>
+                    </div>
+                    <p>This Privacy Policy explains how iWellny ("we", "our", or "the app") collects, uses, and protects your information when you use our iOS application.</p>
                 </div>
             </div>
 
+            <!-- Data We Collect -->
             <div class="glass-card">
-                <h2 class="section-title"><span class="section-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></span>Information We Collect</h2>
-                <p class="section-content"><strong>We don't collect any personal information.</strong> iWellny is designed with privacy as a fundamental principle. No servers store your data, no analytics track your behavior, no ads profile you.</p>
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg></span>Data We Collect</h2>
+                <div class="card-content">
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Data Type</th><th>Purpose</th><th>Storage</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Health Data</strong><br>(HRV, Heart Rate, Sleep, Steps)</td><td>Wellness tracking & insights</td><td>On-device only via HealthKit</td></tr>
+                            <tr><td><strong>Location Data</strong></td><td>Memory sound geo-tagging</td><td>On-device only</td></tr>
+                            <tr><td><strong>Audio Recordings</strong></td><td>Memory sounds feature</td><td>On-device only</td></tr>
+                            <tr><td><strong>App Usage Analytics</strong></td><td>Improve app experience</td><td>Firebase (anonymized)</td></tr>
+                            <tr><td><strong>Crash Reports</strong></td><td>Fix bugs & improve stability</td><td>Firebase (anonymized)</td></tr>
+                            <tr><td><strong>Subscription Data</strong></td><td>Manage premium features</td><td>RevenueCat (anonymized ID)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
+            <!-- On-Device Processing -->
             <div class="glass-card">
-                <h2 class="section-title"><span class="section-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span>Audio Processing</h2>
-                <p class="section-content">All audio processing happens entirely on your device using Apple's native frameworks. Sound mixing, volume adjustments, fade effects, and Memory Sounds recordings never leave your device.</p>
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg></span>On-Device Processing</h2>
+                <div class="card-content">
+                    <p>The following data is processed and stored <strong>entirely on your device</strong> and is never transmitted to our servers:</p>
+                    <ul>
+                        <li><strong>Health data</strong> — All HealthKit data (HRV, heart rate, sleep, steps) stays on your device</li>
+                        <li><strong>Location data</strong> — Used only for geo-tagging memory sounds, stored locally</li>
+                        <li><strong>Audio recordings</strong> — Memory sounds are stored entirely on your device</li>
+                        <li><strong>Sound preferences</strong> — Your mixes, favorites, and settings remain on-device</li>
+                        <li><strong>Wellness goals</strong> — All personal goals and progress tracked locally</li>
+                    </ul>
+                </div>
             </div>
 
+            <!-- Third-Party Services -->
             <div class="glass-card">
-                <h2 class="section-title"><span class="section-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>Health Data</h2>
-                <p class="section-content">When you enable HealthKit, iWellny reads and writes metrics like mindful minutes and HRV. This data is handled exclusively through Apple's HealthKit and stored securely on your device. We never access it.</p>
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></span>Third-Party Services</h2>
+                <div class="card-content">
+                    <p>We use the following third-party services with privacy-focused configurations:</p>
+                    
+                    <p><strong>Firebase Analytics & Crashlytics (Google)</strong></p>
+                    <ul>
+                        <li>Used for anonymous app usage analytics and crash reporting</li>
+                        <li>No personal identifiers are collected</li>
+                        <li>Data is aggregated and anonymized</li>
+                        <li>Helps us understand how to improve the app</li>
+                        <li><a href="https://firebase.google.com/support/privacy" style="color: var(--purple-light);">Firebase Privacy Policy</a></li>
+                    </ul>
+
+                    <p><strong>RevenueCat</strong></p>
+                    <ul>
+                        <li>Manages subscription purchases and entitlements</li>
+                        <li>Uses anonymous app user IDs (not linked to your identity)</li>
+                        <li>Required for premium subscription functionality</li>
+                        <li><a href="https://www.revenuecat.com/privacy" style="color: var(--purple-light);">RevenueCat Privacy Policy</a></li>
+                    </ul>
+
+                    <p><strong>Apple Services</strong></p>
+                    <ul>
+                        <li><strong>HealthKit</strong> — Health data access with your explicit permission</li>
+                        <li><strong>CloudKit/iCloud</strong> — Optional sync to your personal iCloud account</li>
+                        <li><strong>App Store</strong> — Handles all payment processing securely</li>
+                    </ul>
+                </div>
             </div>
 
+            <!-- Your Rights -->
             <div class="glass-card">
-                <h2 class="section-title"><span class="section-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span>Location Services</h2>
-                <p class="section-content">Location data for Memory Sounds is processed locally to tag recordings. This data is stored only on your device and never transmitted to servers or third parties.</p>
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>Your Rights & Controls</h2>
+                <div class="card-content">
+                    <p>You have full control over your data:</p>
+                    <ul>
+                        <li><strong>Health Data Access</strong> — Manage permissions in iOS Settings → Privacy → Health</li>
+                        <li><strong>Location Access</strong> — Control in iOS Settings → Privacy → Location Services</li>
+                        <li><strong>Delete Data</strong> — Delete the app to remove all local data</li>
+                        <li><strong>iCloud Data</strong> — Manage in iOS Settings → [Your Name] → iCloud</li>
+                        <li><strong>Analytics Opt-Out</strong> — Disable in iOS Settings → Privacy → Analytics</li>
+                    </ul>
+                </div>
             </div>
 
+            <!-- Data Security -->
             <div class="glass-card">
-                <h2 class="section-title"><span class="section-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>Contact Us</h2>
-                <p class="section-content">Questions about privacy? Contact us at <a href="mailto:support@iwellny.com" class="contact-link">support@iwellny.com</a></p>
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></span>Data Security</h2>
+                <div class="card-content">
+                    <ul>
+                        <li>All sensitive data is encrypted on your device using iOS encryption</li>
+                        <li>iCloud sync uses Apple's end-to-end encryption</li>
+                        <li>We do not have access to your health data, recordings, or personal content</li>
+                        <li>Network communications use HTTPS/TLS encryption</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Children's Privacy -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></span>Children's Privacy</h2>
+                <div class="card-content">
+                    <p>iWellny is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us at <a href="mailto:support@iwellny.com" style="color: var(--purple-light);">support@iwellny.com</a>.</p>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="glass-card">
+                <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>Contact Us</h2>
+                <div class="card-content">
+                    <p>If you have questions about this Privacy Policy or your data, contact us at:</p>
+                    <p><strong>Email:</strong> <a href="mailto:support@iwellny.com" style="color: var(--purple-light);">support@iwellny.com</a></p>
+                    <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes through the app or by updating the "Last updated" date.</p>
+                </div>
             </div>
         </div>
     </main>
