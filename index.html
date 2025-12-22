@@ -229,29 +229,42 @@
             display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center;
         }
 
-        .showcase-features { display: flex; flex-direction: column; gap: 20px; }
-
-        .showcase-feature {
-            display: flex; align-items: center; gap: 16px; padding: 20px 24px;
-            background: var(--glass-bg); backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border); border-radius: 20px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: default;
+        .showcase-features { 
+            display: flex; flex-direction: column; gap: 0;
+            position: relative; min-height: 160px;
         }
 
-        .showcase-feature:hover {
-            transform: translateX(8px);
+        .showcase-feature-item {
+            display: none; align-items: flex-start; gap: 20px; padding: 24px 28px;
+            background: var(--glass-bg); backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border); border-radius: 24px;
+            opacity: 0; transform: translateY(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .showcase-feature-item.active {
+            display: flex; opacity: 1; transform: translateY(0);
             border-color: rgba(139, 92, 246, 0.3);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(139, 92, 246, 0.1) inset;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(139, 92, 246, 0.1) inset;
         }
 
         .showcase-feature-icon {
-            width: 48px; height: 48px; border-radius: 14px; flex-shrink: 0;
+            width: 56px; height: 56px; border-radius: 16px; flex-shrink: 0;
             background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.05));
             display: flex; align-items: center; justify-content: center; color: var(--purple-light);
         }
 
-        .showcase-feature span { color: var(--text-secondary); font-size: 1rem; font-weight: 500; }
+        .showcase-feature-content { flex: 1; }
+
+        .showcase-feature-content h3 {
+            font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--text-primary), var(--purple-light));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        .showcase-feature-content p {
+            color: var(--text-secondary); font-size: 1rem; line-height: 1.6; margin: 0;
+        }
 
         /* Phone Carousel */
         .phone-carousel-container { position: relative; perspective: 1500px; }
@@ -641,29 +654,140 @@
 
             <div class="showcase-container">
                 <div class="showcase-features">
-                    <div class="showcase-feature">
+                    <div class="showcase-feature-item active" data-slide="0">
                         <div class="showcase-feature-icon">
-                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
                         </div>
-                        <span>Privacy-first — all processing on your device</span>
+                        <div class="showcase-feature-content">
+                            <h3>Home Screen</h3>
+                            <p>Your wellness hub with day/night hero themes, quick actions, suggested soundscapes, and Pomodoro timer access.</p>
+                        </div>
                     </div>
-                    <div class="showcase-feature">
+                    <div class="showcase-feature-item" data-slide="1">
                         <div class="showcase-feature-icon">
-                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66l.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/></svg>
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
                         </div>
-                        <span>Only 6% CPU with 50+ simultaneous sounds</span>
+                        <div class="showcase-feature-content">
+                            <h3>Sound Mixer</h3>
+                            <p>Blend 20+ sounds with individual volume controls. Mix your memory recordings with bundled sounds.</p>
+                        </div>
                     </div>
-                    <div class="showcase-feature">
+                    <div class="showcase-feature-item" data-slide="2">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Guided Meditation</h3>
+                            <p>Follow breathing techniques like Box Breathing, 4-7-8, and more with beautiful visual guides.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="3">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.34 2.02C6.59 1.82 2 6.42 2 12c0 5.52 4.48 10 10 10 3.71 0 6.93-2.02 8.66-5.02-7.51-.25-12.09-8.43-8.32-14.96z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Sleep Timer</h3>
+                            <p>Fall asleep peacefully with gentle fade-out timers. Sounds gradually quiet down as you drift off.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="4">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Wellness Dashboard</h3>
+                            <p>Beautiful charts showing sleep quality, HRV trends, mindfulness minutes, and sound therapy insights.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="5">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Pomodoro Timer</h3>
+                            <p>Boost productivity with customizable focus sessions. Ambient sounds play during work, silence during breaks.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="6">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Full Screen Player</h3>
+                            <p>Immersive playback experience with animated waveforms, gesture controls, and beautiful visualizations.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="7">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Ambient Scenes</h3>
+                            <p>Beautiful animated cards that bring your soundscapes to life. Forest rain, ocean waves, crackling fire.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="8">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Detailed Health</h3>
+                            <p>Deep dive into your HRV, heart rate zones, and how sound therapy correlates with your wellness metrics.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="9">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Wellness Goals</h3>
+                            <p>Set personalized daily targets for steps, sleep, meditation, and sound therapy. Track your progress.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="10">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Memory Sounds</h3>
+                            <p>Record ambient sounds from meaningful places. Capture the sounds of your vacation, your backyard, anywhere.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="11">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Soundscape Map</h3>
+                            <p>View all your memory sounds on an interactive map. Geo-tagged recordings you can revisit anytime.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="12">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3V3zm0 10h8v8H3v-8zm10 0h8v8h-8v-8zm0-10h8v8h-8V3z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Home Screen Widgets</h3>
+                            <p>Quick-access widgets for your Lock Screen and Home Screen. Control sounds without opening the app.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="13">
+                        <div class="showcase-feature-icon">
+                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>
+                        </div>
+                        <div class="showcase-feature-content">
+                            <h3>Achievements</h3>
+                            <p>Unlock exclusive sounds, breathing meditations, extra mix layers, and more memory slots as you progress.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-feature-item" data-slide="14">
                         <div class="showcase-feature-icon">
                             <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
                         </div>
-                        <span>Premium glass UI with smooth animations</span>
-                    </div>
-                    <div class="showcase-feature">
-                        <div class="showcase-feature-icon">
-                            <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12c0-2.54-1.19-4.81-3.04-6.27L16 0H8l-.95 5.73C5.19 7.19 4 9.45 4 12s1.19 4.81 3.05 6.27L8 24h8l.96-5.73C18.81 16.81 20 14.54 20 12zM6 12c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6-6-2.69-6-6z"/></svg>
+                        <div class="showcase-feature-content">
+                            <h3>Rewards</h3>
+                            <p>Earn unique sounds, exclusive breathing techniques, increased layer limits, and bonus journey slots.</p>
                         </div>
-                        <span>Apple Watch companion app included</span>
                     </div>
                 </div>
 
@@ -975,6 +1099,7 @@
 
         // Phone Carousel
         const slides = document.querySelectorAll('.phone-slide');
+        const featureItems = document.querySelectorAll('.showcase-feature-item');
         const dotsContainer = document.getElementById('carouselDots');
         let currentSlide = 0;
         const totalSlides = slides.length;
@@ -1005,6 +1130,11 @@
             document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentSlide);
             });
+
+            // Update feature description
+            featureItems.forEach((item, index) => {
+                item.classList.toggle('active', index === currentSlide);
+            });
         }
 
         function nextSlide() {
@@ -1026,14 +1156,21 @@
         updateCarousel();
 
         // Auto-advance carousel
-        setInterval(nextSlide, 5000);
+        let autoAdvance = setInterval(nextSlide, 5000);
+
+        // Pause auto-advance on interaction
+        const carousel = document.getElementById('phoneCarousel');
+        carousel.addEventListener('mouseenter', () => clearInterval(autoAdvance));
+        carousel.addEventListener('mouseleave', () => {
+            autoAdvance = setInterval(nextSlide, 5000);
+        });
 
         // Touch/swipe support for carousel
         let touchStartX = 0;
-        const carousel = document.getElementById('phoneCarousel');
         
         carousel.addEventListener('touchstart', e => {
             touchStartX = e.touches[0].clientX;
+            clearInterval(autoAdvance);
         }, { passive: true });
 
         carousel.addEventListener('touchend', e => {
@@ -1043,6 +1180,7 @@
                 if (diff > 0) nextSlide();
                 else prevSlide();
             }
+            autoAdvance = setInterval(nextSlide, 5000);
         }, { passive: true });
     </script>
 </body>
