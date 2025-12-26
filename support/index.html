@@ -23,7 +23,7 @@
         .navbar-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary); }
         .navbar-logo { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--purple-accent), var(--purple-dark)); box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3); overflow: hidden; }
         .navbar-logo img { width: 100%; height: 100%; object-fit: cover; }
-        .navbar-title { font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, var(--purple-light), var(--purple-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .navbar-title { font-size: 1.5rem; font-weight: 700; color: #FFFFFF; }
         .navbar-nav { display: flex; gap: 32px; align-items: center; }
         .navbar-nav a { color: var(--text-secondary); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
         .navbar-nav a:hover { color: var(--purple-light); }
@@ -40,13 +40,16 @@
         .glass-card { background: var(--glass-bg); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 36px; margin-bottom: 30px; }
         .card-title { font-size: 1.4rem; font-weight: 700; color: var(--purple-light); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
         .card-title-icon { width: 36px; height: 36px; border-radius: 10px; background: rgba(139, 92, 246, 0.15); display: flex; align-items: center; justify-content: center; color: var(--purple-light); }
+        .faq-category { font-size: 1rem; font-weight: 600; color: var(--purple-light); margin: 28px 0 16px 0; padding-bottom: 10px; border-bottom: 1px solid var(--glass-border); display: flex; align-items: center; gap: 10px; }
+        .faq-category:first-of-type { margin-top: 0; }
+        .faq-category-icon { width: 22px; height: 22px; color: var(--purple-accent); }
         .faq-item { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--glass-border); border-radius: 16px; margin-bottom: 12px; overflow: hidden; transition: all 0.3s ease; }
         .faq-item:hover { border-color: rgba(139, 92, 246, 0.2); }
         .faq-question { padding: 20px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
         .faq-question::after { content: '+'; font-size: 1.5rem; color: var(--purple-accent); transition: transform 0.3s ease; }
         .faq-item.open .faq-question::after { transform: rotate(45deg); }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        .faq-item.open .faq-answer { max-height: 500px; }
+        .faq-item.open .faq-answer { max-height: 600px; }
         .faq-answer-content { padding: 0 24px 20px; color: var(--text-secondary); line-height: 1.7; }
         .trouble-section { margin-bottom: 28px; }
         .trouble-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
@@ -59,43 +62,35 @@
         .requirement-icon { margin-bottom: 8px; color: var(--purple-light); }
         .requirement-label { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 4px; }
         .requirement-value { font-weight: 600; }
+        .requirement-note { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
         .contact-card { background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(139, 92, 246, 0.05)); border: 1px solid rgba(139, 92, 246, 0.3); text-align: center; padding: 48px 36px; }
         .contact-card .card-title { justify-content: center; color: var(--text-primary); }
         .contact-card p { color: var(--text-secondary); margin-bottom: 24px; }
-        .contact-email { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; background: linear-gradient(135deg, var(--purple-accent), var(--purple-dark)); border-radius: 14px; color: white; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3); }
-        .contact-email:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4); }
-        .response-time { margin-top: 16px; color: var(--text-muted); font-size: 0.9rem; }
-        .footer { background: rgba(13, 27, 42, 0.9); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); padding: 60px 24px 30px; }
+        .contact-email { display: inline-flex; align-items: center; gap: 10px; background: var(--purple-accent); color: white; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+        .contact-email:hover { background: var(--purple-dark); transform: translateY(-2px); }
+        .response-time { margin-top: 16px; font-size: 0.9rem; color: var(--text-muted); }
+        .footer { border-top: 1px solid var(--glass-border); padding: 48px 24px 32px; margin-top: 80px; }
         .footer-container { max-width: 1200px; margin: 0 auto; }
-        .footer-top { display: flex; justify-content: space-between; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
-        .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-        .footer-brand-icon { width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, var(--purple-accent), var(--purple-dark)); display: flex; align-items: center; justify-content: center; }
-        .footer-brand-icon .sf-icon { width: 22px; height: 22px; color: white; }
-        .footer-brand-name { font-size: 1.3rem; font-weight: 700; }
-        .footer-tagline { color: var(--text-muted); max-width: 300px; }
-        .footer-links { display: flex; gap: 40px; }
-        .footer-column h4 { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
-        .footer-column a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 10px; transition: color 0.3s ease; }
+        .footer-top { display: grid; grid-template-columns: 1.5fr 2fr; gap: 60px; margin-bottom: 40px; }
+        .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+        .footer-brand-icon { width: 36px; height: 36px; border-radius: 8px; overflow: hidden; }
+        .footer-brand-name { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); }
+        .footer-tagline { color: var(--text-muted); font-size: 0.9rem; max-width: 280px; }
+        .footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .footer-column h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 16px; color: var(--text-primary); }
+        .footer-column a { display: block; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 10px; transition: color 0.3s ease; }
         .footer-column a:hover { color: var(--purple-light); }
-        .footer-bottom { border-top: 1px solid var(--glass-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-        .copyright { color: var(--text-muted); font-size: 0.9rem; }
-        .footer-social { display: flex; gap: 12px; }
-        .footer-social a { width: 40px; height: 40px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: all 0.3s ease; }
-        .footer-social a:hover { background: rgba(139, 92, 246, 0.2); border-color: rgba(139, 92, 246, 0.3); color: var(--purple-light); }
-        @media (max-width: 768px) {
-            .navbar-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(13, 27, 42, 0.98); backdrop-filter: blur(20px); flex-direction: column; padding: 20px; border-top: 1px solid var(--glass-border); }
-            .navbar-nav.mobile-open { display: flex; }
-            .navbar-toggle { display: block; }
-            .navbar-nav a { padding: 16px 0; border-bottom: 1px solid var(--glass-border); width: 100%; text-align: center; }
-            .glass-card { padding: 28px 20px; }
-            .footer-top, .footer-links { flex-direction: column; }
-            .footer-links { gap: 30px; }
-            .footer-bottom { flex-direction: column; text-align: center; }
-        }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--glass-border); }
+        .copyright { font-size: 0.85rem; color: var(--text-muted); }
+        .footer-social { display: flex; gap: 16px; }
+        .footer-social a { color: var(--text-muted); transition: color 0.3s ease; }
+        .footer-social a:hover { color: var(--purple-light); }
+        @media (max-width: 768px) { .navbar-nav { display: none; } .navbar-toggle { display: block; } .footer-top { grid-template-columns: 1fr; gap: 40px; } .footer-links { grid-template-columns: repeat(2, 1fr); } .footer-bottom { flex-direction: column; gap: 16px; text-align: center; } }
     </style>
 </head>
 <body>
     <div class="animated-bg"></div>
+
     <nav class="navbar">
         <div class="container">
             <a href="/" class="navbar-brand">
@@ -118,43 +113,105 @@
 
     <main class="main-content">
         <div class="content-container">
-            <a href="/" class="back-link">
-                <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-                Back to Home
-            </a>
+            <a href="/" class="back-link"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>Back to Home</a>
             
             <div class="page-header">
-                <div class="header-icon">
-                    <svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor" style="width:36px;height:36px"><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/></svg>
-                </div>
-                <h1 class="page-title">Support</h1>
-                <p class="page-subtitle">We're here to help you get the most out of iWellny</p>
+                <div class="header-icon"><svg class="sf-icon-lg" viewBox="0 0 24 24" fill="currentColor" style="width:40px;height:40px"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
+                <h1 class="page-title">Support Center</h1>
+                <p class="page-subtitle">Find answers and get help with iWellny</p>
             </div>
 
             <div class="glass-card">
                 <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg></span>Frequently Asked Questions</h2>
                 
-                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">How do I mix multiple sounds together?</div><div class="faq-answer"><div class="faq-answer-content">Tap the "Mixer" tab to access our sound mixing studio. Add sounds with "+", adjust volumes with sliders, and save combinations as presets. Mix up to 70 sounds!</div></div></div>
-                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Can I use iWellny while using other apps?</div><div class="faq-answer"><div class="faq-answer-content">Yes! iWellny supports background playback. Sounds continue when you switch apps, lock your device, or turn off the screen.</div></div></div>
-                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">How do Live Activities work?</div><div class="faq-answer"><div class="faq-answer-content">On iOS 16.1+, control iWellny from Lock Screen and Dynamic Island without opening the app. Enable in Settings → iWellny → Live Activities.</div></div></div>
-                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">What are Memory Sounds?</div><div class="faq-answer"><div class="faq-answer-content">Record ambient audio from meaningful places. Recordings are saved with location data so you can relive those moments anytime.</div></div></div>
-                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Is my data private?</div><div class="faq-answer"><div class="faq-answer-content">Absolutely! All processing happens on your device. We don't collect or store personal information. See our <a href="/privacy" style="color:var(--purple-light)">Privacy Policy</a>.</div></div></div>
+                <div class="faq-category"><svg class="faq-category-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>Sound Mixing & Playback</div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">How do I mix multiple sounds together?</div><div class="faq-answer"><div class="faq-answer-content">Tap the "Mixer" tab at the bottom of the screen to access the Sound Mixer. Tap the "+" button to add sounds — you can mix up to 20+ sounds simultaneously! Each sound has its own volume slider, and there's a master volume at the top. Create your perfect soundscape by combining rain, thunder, forest sounds, white noise, and more. Premium users can save unlimited custom presets.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Can I use iWellny while using other apps?</div><div class="faq-answer"><div class="faq-answer-content">Yes! iWellny supports full background playback. Your sounds will continue playing when you switch apps, lock your device, or turn off the screen. You can also control playback from the Lock Screen, Control Center, and Dynamic Island (on supported devices). Perfect for sleeping, working, or meditating while using other apps.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">How do I save my favorite sound combinations?</div><div class="faq-answer"><div class="faq-answer-content">In the Sound Mixer, create your perfect mix with multiple sounds at your preferred volumes. Tap "Save Preset" to save it with a custom name. Premium users can save unlimited presets. Free users can use system presets like "Ocean Breeze," "Forest Rain," and "Deep Focus." Your saved presets sync across sessions so they're always ready when you need them.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">What's the difference between local and streaming sounds?</div><div class="faq-answer"><div class="faq-answer-content">Local sounds are bundled with the app and work offline instantly. Streaming sounds come from our server with higher quality options and a larger library. When you play a streaming sound, it downloads in the background for offline use. Both work seamlessly in the mixer. The app automatically chooses the best source for optimal performance.</div></div></div>
+
+                <div class="faq-category"><svg class="faq-category-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>Sleep Timer & Focus</div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">How does the Sleep Timer work?</div><div class="faq-answer"><div class="faq-answer-content">The Sleep Timer lets you fall asleep to soothing sounds without worrying about battery drain. From the Home screen, tap the Sleep Timer banner and choose a duration (15, 30, 60, or 120 minutes). Enable "Long Fade" for a gradual volume reduction over several minutes before sounds stop completely. The timer works even when your phone is locked.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">What is the Pomodoro Timer?</div><div class="faq-answer"><div class="faq-answer-content">The Pomodoro Timer helps you stay productive using the popular time management technique. Work for 25 minutes with ambient sounds, then take a 5-minute break. After four cycles, take a longer 15-30 minute break. The timer continues in the background and sends notifications when each phase completes. Customize work and break durations to match your workflow.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Why isn't my timer sending notifications?</div><div class="faq-answer"><div class="faq-answer-content">Timer notifications require permission. Go to Settings → iWellny → Notifications and ensure they're enabled. Also check that Focus mode or Do Not Disturb isn't blocking notifications. The app will prompt for notification permission the first time you use the Sleep Timer or Pomodoro Timer.</div></div></div>
+
+                <div class="faq-category"><svg class="faq-category-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Meditation & Breathing</div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">What breathing techniques are available?</div><div class="faq-answer"><div class="faq-answer-content">iWellny includes 16+ guided breathing techniques with beautiful visual animations. Free users can access Box Breathing and Heart Coherence. Premium unlocks all techniques including: 4-7-8 Relaxation, Triangle Breathing, Diamond Breathing, Infinity Breathing, and more. Each technique has customizable timing and optional haptic feedback to guide your breath.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Can I combine sounds with meditation?</div><div class="faq-answer"><div class="faq-answer-content">Yes! You can play ambient sounds while using breathing exercises. Start your favorite soundscape in the mixer, then navigate to Meditation. The sounds continue playing while you follow the breathing guide. This creates an immersive experience that enhances relaxation and focus.</div></div></div>
+
+                <div class="faq-category"><svg class="faq-category-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>Memory Sounds</div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">What are Memory Sounds?</div><div class="faq-answer"><div class="faq-answer-content">Memory Sounds lets you record ambient audio from meaningful places — a beach vacation, your favorite coffee shop, rain on your window, or birds in your garden. Each recording is automatically tagged with location data and placed on an interactive map. Relive those peaceful moments anytime by playing your personal sound collection.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">How do I record a Memory Sound?</div><div class="faq-answer"><div class="faq-answer-content">From the Home screen, tap "Record Memory" in Quick Actions or go to the Memory tab. Tap the record button to start capturing audio. When finished, add a name and optional notes. The app automatically captures your current location. You can view all your recordings on the interactive sound map and organize them into Journeys.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Can I mix my recordings with other sounds?</div><div class="faq-answer"><div class="faq-answer-content">Yes! Your Memory Sounds can be added to the Sound Mixer just like any other sound. Combine your beach recording with gentle rain, or mix your coffee shop audio with soft piano. You can even save these custom mixes as presets for quick access.</div></div></div>
+
+                <div class="faq-category"><svg class="faq-category-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Health & Wellness</div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">How does Apple Health integration work?</div><div class="faq-answer"><div class="faq-answer-content">iWellny can sync with Apple Health to track mindfulness minutes and provide wellness insights. When enabled, your meditation sessions are recorded as mindful minutes. The Wellness Dashboard shows correlations between your sound therapy usage and health metrics like HRV (Heart Rate Variability) and sleep quality when you have an Apple Watch.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">What wellness metrics can I track?</div><div class="faq-answer"><div class="faq-answer-content">The Wellness Dashboard shows: total listening time, meditation minutes, sound therapy effectiveness, sleep patterns, HRV analysis (with Apple Watch), daily steps with "mindful steps" correlation, and achievement progress. Premium users get advanced weekly and monthly trend analysis plus personalized insights.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Why isn't my HRV data updating?</div><div class="faq-answer"><div class="faq-answer-content">HRV data comes from Apple Watch and syncs through Apple Health. Open the Health app on your iPhone to verify you have recent HRV readings. Data syncs periodically, not in real-time. Try opening the Heart Rate app on your Apple Watch to capture a fresh reading. If data appears in the Health app but not iWellny, try force-closing and reopening iWellny.</div></div></div>
+
+                <div class="faq-category"><svg class="faq-category-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>Controls & Interface</div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">How do Live Activities and Dynamic Island work?</div><div class="faq-answer"><div class="faq-answer-content">On iPhone 14 Pro and newer (iOS 16.1+), iWellny displays controls in the Dynamic Island while playing. You can see elapsed time, pause/play, and quickly access the app. On all supported devices, the Lock Screen shows playback controls with artwork. These features use Apple's native media player integration for the best experience.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Can I control playback from Control Center?</div><div class="faq-answer"><div class="faq-answer-content">Yes! When sounds are playing, you can control iWellny from Control Center just like Apple Music. Access play/pause, skip, and volume controls. This also works with AirPods controls, CarPlay, and Siri commands like "Hey Siri, pause iWellny."</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Are there Home Screen widgets?</div><div class="faq-answer"><div class="faq-answer-content">Yes! Long-press your Home Screen and tap "+" to add widgets. iWellny offers widgets for quick sound playback, sleep timer shortcuts, and daily wellness stats. Widgets let you start your favorite sounds without opening the app.</div></div></div>
+
+                <div class="faq-category"><svg class="faq-category-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>Premium & Account</div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">What does Premium include?</div><div class="faq-answer"><div class="faq-answer-content">Premium unlocks: 12+ simultaneous sound layers (vs 6 free), all 100+ premium sounds, unlimited custom presets, all 16+ breathing techniques, unlimited meditation sessions, unlimited memory sound recordings, advanced wellness analytics, the Pomodoro timer, and ad-free experience. Premium costs $4.99/month with a 7-day free trial.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">How do I restore my purchase?</div><div class="faq-answer"><div class="faq-answer-content">Go to Settings → Subscription → Restore Purchases. Make sure you're signed into the same Apple ID used for the original purchase. If restoration fails, try signing out and back into the App Store, then restart iWellny and try again.</div></div></div>
+
+                <div class="faq-category"><svg class="faq-category-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>Privacy & Data</div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Is my data private?</div><div class="faq-answer"><div class="faq-answer-content">Absolutely! All audio processing and most data stays on your device. We don't collect personal information or track your listening habits on our servers. Memory Sound locations are stored locally. Health data is handled securely through Apple's HealthKit framework. See our <a href="/privacy" style="color:var(--purple-light)">Privacy Policy</a> for details.</div></div></div>
+                
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Does iWellny work offline?</div><div class="faq-answer"><div class="faq-answer-content">Yes! All bundled sounds work completely offline. Streaming sounds are cached after first play for offline use. Your saved presets, memory recordings, and meditation exercises work without internet. Only downloading new premium sounds or syncing cloud presets requires a connection.</div></div></div>
             </div>
 
             <div class="glass-card">
                 <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg></span>Troubleshooting</h2>
-                <div class="trouble-section"><h3 class="trouble-title">Audio Issues</h3><ul class="trouble-list"><li>Check device volume is turned up</li><li>Disable silent mode (mute switch)</li><li>Restart the app</li><li>Ensure sufficient storage space</li></ul></div>
-                <div class="trouble-section"><h3 class="trouble-title">Background Playback</h3><ul class="trouble-list"><li>Enable Background App Refresh in Settings</li><li>Disable Low Power Mode</li><li>Check background audio permissions</li></ul></div>
-                <div class="trouble-section"><h3 class="trouble-title">Live Activities</h3><ul class="trouble-list"><li>Requires iOS 16.1 or later</li><li>Check Face ID & Passcode settings</li><li>Enable in Settings → iWellny</li></ul></div>
+                
+                <div class="trouble-section"><h3 class="trouble-title">Audio Not Playing</h3><ul class="trouble-list"><li>Check that your device volume is turned up (use physical buttons)</li><li>Disable silent mode — flip the mute switch on the side of your iPhone</li><li>Check that no other audio apps are playing (Spotify, Apple Music, etc.)</li><li>If using AirPods/headphones, ensure they're connected and selected</li><li>Force close the app and reopen: swipe up from the bottom, swipe iWellny away</li><li>Restart your iPhone if audio issues persist</li></ul></div>
+                
+                <div class="trouble-section"><h3 class="trouble-title">Background Playback Stops</h3><ul class="trouble-list"><li>Ensure Background App Refresh is enabled: Settings → General → Background App Refresh → iWellny</li><li>Disable Low Power Mode: Settings → Battery → Low Power Mode OFF</li><li>Check that iWellny isn't restricted: Settings → iWellny → verify all permissions</li><li>Don't force-close the app from the app switcher while sounds are playing</li><li>If using Sleep Timer, sounds will stop when the timer completes (this is expected)</li><li>Avoid using other audio apps simultaneously as they may interrupt playback</li></ul></div>
+                
+                <div class="trouble-section"><h3 class="trouble-title">Sound Mixing Issues</h3><ul class="trouble-list"><li>If sounds cut out when adding new layers, try pausing and resuming playback</li><li>Ensure you have enough storage space (at least 500 MB free recommended)</li><li>When switching between streaming and local sounds, brief interruptions are normal</li><li>If a preset doesn't load all sounds, some may have been removed from the library</li><li>Close other memory-intensive apps if experiencing lag with many sound layers</li></ul></div>
+                
+                <div class="trouble-section"><h3 class="trouble-title">Sleep Timer & Pomodoro</h3><ul class="trouble-list"><li>Timer notifications require notification permission — grant when prompted</li><li>Check that Focus/Do Not Disturb isn't blocking iWellny notifications</li><li>The Sleep Timer fade begins at the set time, not before</li><li>Pomodoro timer continues in background but needs notification permission for alerts</li><li>If timer shows wrong time, force close and reopen the app</li></ul></div>
+                
+                <div class="trouble-section"><h3 class="trouble-title">Dynamic Island & Lock Screen</h3><ul class="trouble-list"><li>Dynamic Island requires iPhone 14 Pro or newer with iOS 16.1+</li><li>Lock Screen controls appear automatically when audio is playing</li><li>If controls don't appear, try pausing and playing again</li><li>Verify Live Activities are enabled: Settings → Face ID & Passcode → Allow Access When Locked</li><li>If the activity gets "stuck," stop all audio and start fresh</li></ul></div>
+                
+                <div class="trouble-section"><h3 class="trouble-title">Memory Sound Recording</h3><ul class="trouble-list"><li>Microphone permission required — go to Settings → iWellny → Microphone</li><li>Location permission needed for map tagging — enable When In Use location</li><li>Recordings are stored on your device — ensure sufficient storage space</li><li>If recording quality is poor, check that nothing is covering the microphone</li><li>Recordings may not save if you close the app during recording</li></ul></div>
+                
+                <div class="trouble-section"><h3 class="trouble-title">HealthKit & Apple Watch</h3><ul class="trouble-list"><li>Grant Health permissions when prompted, or enable in Settings → Health → Data Access</li><li>HRV and heart rate data requires Apple Watch — iPhone alone doesn't measure HRV</li><li>Health data syncs periodically, not instantly — wait a few minutes for updates</li><li>If data seems outdated, open the Health app to verify recent measurements exist</li><li>Restart iWellny after granting new Health permissions</li></ul></div>
+                
+                <div class="trouble-section"><h3 class="trouble-title">Purchase & Subscription</h3><ul class="trouble-list"><li>Use "Restore Purchases" in Settings if Premium isn't recognized after reinstall</li><li>Ensure you're signed into the same Apple ID used for purchase</li><li>Check subscription status: Settings → Apple ID → Subscriptions</li><li>If trial expired without notice, verify your payment method is valid</li><li>Contact Apple Support for billing issues with App Store purchases</li></ul></div>
             </div>
 
             <div class="glass-card">
                 <h2 class="card-title"><span class="card-title-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg></span>Requirements</h2>
                 <div class="requirements-grid">
-                    <div class="requirement-item"><div class="requirement-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg></div><div class="requirement-label">iOS</div><div class="requirement-value">17.0+</div></div>
-                    <div class="requirement-item"><div class="requirement-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/></svg></div><div class="requirement-label">iPhone</div><div class="requirement-value">8+</div></div>
-                    <div class="requirement-item"><div class="requirement-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z"/></svg></div><div class="requirement-label">Storage</div><div class="requirement-value">100 MB</div></div>
-                    <div class="requirement-item"><div class="requirement-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12c0-2.54-1.19-4.81-3.04-6.27L16 0H8l-.95 5.73C5.19 7.19 4 9.45 4 12s1.19 4.81 3.05 6.27L8 24h8l.96-5.73C18.81 16.81 20 14.54 20 12z"/></svg></div><div class="requirement-label">Watch</div><div class="requirement-value">10.0+</div></div>
+                    <div class="requirement-item"><div class="requirement-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg></div><div class="requirement-label">iOS Version</div><div class="requirement-value">18.0+</div></div>
+                    <div class="requirement-item"><div class="requirement-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/></svg></div><div class="requirement-label">iPhone</div><div class="requirement-value">SE/8+</div><div class="requirement-note">and newer</div></div>
+                    <div class="requirement-item"><div class="requirement-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z"/></svg></div><div class="requirement-label">Storage</div><div class="requirement-value">300 MB</div><div class="requirement-note">minimum</div></div>
+                    <div class="requirement-item"><div class="requirement-icon"><svg class="sf-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12c0-2.54-1.19-4.81-3.04-6.27L16 0H8l-.95 5.73C5.19 7.19 4 9.45 4 12s1.19 4.81 3.05 6.27L8 24h8l.96-5.73C18.81 16.81 20 14.54 20 12z"/></svg></div><div class="requirement-label">Apple Watch</div><div class="requirement-value">Optional</div><div class="requirement-note">for HRV data</div></div>
                 </div>
             </div>
 
@@ -194,8 +251,18 @@
     </footer>
 
     <script>
-        function toggleMobileMenu() { document.getElementById('navbarNav').classList.toggle('mobile-open'); }
-        function toggleFaq(el) { const item = el.parentElement; const wasOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); if (!wasOpen) item.classList.add('open'); }
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(item => {
+                if (item !== faqItem) item.classList.remove('open');
+            });
+            faqItem.classList.toggle('open');
+        }
+        function toggleMobileMenu() {
+            const nav = document.getElementById('navbarNav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
     </script>
 </body>
 </html>
