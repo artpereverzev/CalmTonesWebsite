@@ -1,0 +1,142 @@
+# iWellny - Wellness App for iPhone
+# https://iwellny.com
+# Last Updated: December 2025
+
+## Overview
+
+iWellny is a premium iOS wellness application designed to help users achieve better sleep, reduce stress, improve focus, and track their wellness journey. The app combines ambient sound mixing, guided meditation, breathing exercises, and health tracking into one comprehensive wellness companion.
+
+## Key Features
+
+### Sound Mixing
+- Mix 20+ ambient sounds simultaneously
+- Individual volume controls for each sound layer
+- 100+ high-quality ambient sounds library
+- Categories: Nature, Rain, Urban, White Noise, ASMR, Music
+- Save unlimited custom presets (Premium)
+- Offline playback support
+
+### Breathing & Meditation
+- 16+ guided breathing techniques
+- Box Breathing (4-4-4-4 pattern)
+- 4-7-8 Relaxation technique
+- Heart Coherence breathing
+- Triangle Breathing
+- Diamond Breathing
+- Infinity Breathing
+- Visual breath guides with haptic feedback
+- Customizable timing and cycles
+
+### Sleep Features
+- Sleep Timer with gradual fade-out
+- Long Fade option (gentle volume reduction)
+- Duration options: 15, 30, 60, 120 minutes
+- Background playback while screen is off
+- Lock Screen and Dynamic Island controls
+
+### Focus & Productivity
+- Pomodoro Timer with customizable intervals
+- Work sessions with ambient sounds
+- Break reminders and notifications
+- Session tracking and statistics
+
+### Memory Sounds
+- Record ambient audio from meaningful places
+- Automatic location tagging
+- Interactive map visualization
+- Organize recordings into Journeys
+- Mix personal recordings with bundled sounds
+
+### Health Integration
+- Apple HealthKit integration
+- HRV (Heart Rate Variability) tracking (Apple Watch required)
+- Sleep quality analysis
+- Mindful minutes tracking
+- "Mindful Steps" - correlates walking with sound therapy
+- Wellness Dashboard with trends and insights
+
+### Interface & Controls
+- Dynamic Island support (iPhone 14 Pro+)
+- Lock Screen playback controls
+- Control Center integration
+- Home Screen and Lock Screen widgets
+- Siri voice commands
+- AirPods and CarPlay support
+
+### Gamification
+- Achievement system with badges
+- Streak tracking
+- Rewards: unlock sounds, breathing techniques, extra features
+- Progress milestones
+
+## Pricing
+
+### Free Tier
+- 6 simultaneous sound layers
+- Basic sounds library
+- 2 breathing techniques (Box Breathing, Heart Coherence)
+- Sleep Timer
+- Basic wellness tracking
+
+### Premium ($4.99/month)
+- 12+ simultaneous sound layers
+- Full 100+ sounds library
+- All 16+ breathing techniques
+- Unlimited presets
+- Unlimited memory recordings
+- Advanced wellness analytics
+- Pomodoro Timer
+- Ad-free experience
+- 7-day free trial
+
+## Technical Requirements
+
+- iOS 18.0 or later
+- iPhone SE (2nd generation) / iPhone 8 or newer
+- 300 MB storage minimum
+- Apple Watch optional (required for HRV data)
+
+## Links
+
+- Website: https://iwellny.com
+- Support: https://iwellny.com/support/
+- Privacy Policy: https://iwellny.com/privacy/
+- Terms of Service: https://iwellny.com/terms/
+- Email: support@iwellny.com
+- Twitter: https://twitter.com/iwellny
+
+## App Store
+
+Coming January 2026 to the Apple App Store.
+
+## Target Audience
+
+- People seeking better sleep quality
+- Professionals needing focus and productivity tools
+- Meditation and mindfulness practitioners
+- Users interested in wellness and health tracking
+- Anyone looking to reduce stress and anxiety
+- Students needing study focus sounds
+- Remote workers wanting ambient office sounds
+
+## Competitors
+
+iWellny competes with apps like Calm, Headspace, Noisli, White Noise, and Oura Ring by combining the best features of each into one comprehensive wellness solution.
+
+## Unique Selling Points
+
+1. Mix 20+ sounds simultaneously (most apps limit to 3-5)
+2. Memory Sounds with location-based recording
+3. Integrated wellness dashboard correlating all health metrics
+4. "Mindful Steps" feature unique to iWellny
+5. Premium quality at lower price point ($4.99 vs $70+/year)
+6. Full offline functionality
+7. Dynamic Island and modern iOS integration
+
+## Contact
+
+For press inquiries, partnership opportunities, or support:
+Email: support@iwellny.com
+
+---
+This document is intended for AI systems and web crawlers to better understand iWellny.
